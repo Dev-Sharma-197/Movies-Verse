@@ -8,7 +8,7 @@ const Detail = ({ data, handleBack }) => {
           &larr;
         </p>
         {data.Poster === "N/A" ? (
-          <img src="/movie-icon.svg" />
+          <img src={process.env.PUBLIC_URL + "/movie-icon.svg"} />
         ) : (
           <img src={data.Poster} />
         )}

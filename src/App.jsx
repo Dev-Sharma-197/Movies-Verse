@@ -103,7 +103,7 @@ const App = () => {
       {isThere && (
         <div style={{ height: "20rem", width: "100%", textAlign: "center" }}>
           <img
-            src="/movie-icon.svg"
+            src={process.env.PUBLIC_URL + "/movie-icon.svg"}
             style={{ height: "10rem", width: "100%" }}
           />
           <h1>Nothing like that 😒</h1>

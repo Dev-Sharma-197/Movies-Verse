@@ -1,11 +1,17 @@
-const Card = ({data, handleOnClick}) => {
-
+const Card = ({ data, handleOnClick }) => {
   return (
     <>
-      <div className="card" onClick={()=>{
-        handleOnClick(data.imdbID)
-      }} >
-        {data.Poster === "N/A" ? <img src="/movie-icon.svg" /> : <img src={data.Poster} />}
+      <div
+        className="card"
+        onClick={() => {
+          handleOnClick(data.imdbID);
+        }}
+      >
+        {data.Poster === "N/A" ? (
+          <img src={process.env.PUBLIC_URL + "/movie-icon.svg"} />
+        ) : (
+          <img src={data.Poster} />
+        )}
         <div className="info">
           <h2 className="title">{data.Title}</h2>
         </div>
