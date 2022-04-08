@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html::-webkit-scrollbar {
+  width: 0%;
+}
+
+body,
+#root {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c5fc 100%);
+}
+
+#root {
+  background-color: #8ec5fc;
+}
+
+.heading {
+  font-weight: 300;
+  filter: drop-shadow(8px 4px 4px black);
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background-image: linear-gradient(270deg, #e2eaf3 0%, #e1d3f3 100%);
+  box-shadow: 0px 13px 10px -7px rgb(0, 0, 0, 0.1);
+  height: 5rem;
+  padding: 0 5rem;
+  display: flex;
+  z-index: 10;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.loading {
+  height: 50vh;
+  width: 100%;
+  text-align: center;
+  line-height: 50vh;
+  font-weight: 300;
+}
+
+.inputs > input,
+select {
+  outline: none;
+  margin: 0 0.5rem;
+  border-radius: 5rem;
+  border: none;
+  padding: 0 1rem;
+  text-align: center;
+  height: 2.5rem;
+}
+
+.inputs input:hover,
+select:hover {
+  box-shadow: 0px 13px 10px -7px rgb(0, 0, 0, 0.1);
+}
+
+.container {
+  margin: 2rem 0;
+  width: 100%;
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, 15rem);
+  justify-content: center;
+}
+
+.card {
+  background: #e7d5ff;
+  height: 30rem;
+  width: auto;
+  overflow: hidden;
+  border-radius: 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+  box-shadow: 0px 13px 10px -7px rgb(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.card > img {
+  height: 80%;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.pagination {
+  list-style: none;
+  overflow-x: auto;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pagination::-webkit-scrollbar {
+  width: 0%;
+}
+
+.page-items {
+  width: 25px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  text-align: center;
+  border: 1px solid #6a88a7;
+  border-radius: 4px;
+}
+
+.page-items:hover {
+  border: 1px solid #0632f8;
+}
+
+.page-link {
+  color: black;
+}
+
+@media (max-width: 425px) {
+  html {
+    font-size: 52%;
+  }
+  .inputs > input,
+  select {
+    padding: 0;
+    margin: 0 2px;
+    width: 12rem;
+  }
+  .container{
+    grid-template-columns: repeat(auto-fit, 20rem);
+  }
+}
+@media (max-width: 375px) {
+  html {
+    font-size: 45%;
+  }
+
+  .inputs > input,
+  select {
+    width: 9rem;
+  }
+}
