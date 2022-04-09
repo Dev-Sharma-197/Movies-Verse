@@ -22,8 +22,7 @@ const Detail = ({ data, handleBack }) => {
           <div className="genre">
             <p>{data.Genre}</p>
             <p>
-              {" "}
-              <img className="star" src="/star.png" alt="star" />{" "}
+              <img className="star" src={process.env.PUBLIC_URL + "/star.png"} alt="star" />
               {data.imdbRating}
             </p>
           </div>
