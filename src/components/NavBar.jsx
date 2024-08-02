@@ -1,8 +1,11 @@
-const NavBar = ({ handlSearchText, handleSelect }) => {
+const NavBar = ({ handlSearchText, handleSelect, reset }) => {
   const handleKey = (event) => {
-    if (event.key === "Enter" && event.target.value !== null) {
-      handlSearchText(event.target.value);
-    }
+    event.key === "Enter" ?
+      event.target.value ?
+        handlSearchText(event.target.value)
+        : reset()
+      : null;
+
   };
   return (
     <>

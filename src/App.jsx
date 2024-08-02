@@ -33,9 +33,15 @@ const App = () => {
       setData((data) => [...data, mData.Search[0]]);
     });
   }
-  useEffect(() => {
+
+  const initialList = () => {
+    console.log('fir')
     setThere(false);
     getData(myData);
+  }
+
+  useEffect(() => {
+    initialList();
   }, []);
   // Getting data on user input
   useEffect(() => {
@@ -99,7 +105,7 @@ const App = () => {
 
   return (
     <>
-      <NavBar handlSearchText={setInput} handleSelect={handleSelect} />
+      <NavBar handlSearchText={setInput} handleSelect={handleSelect} reset={initialList} />
       {isThere && (
         <div style={{ height: "20rem", width: "100%", textAlign: "center" }}>
           <img

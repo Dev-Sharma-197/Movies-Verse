@@ -1,10 +1,19 @@
+import { useEffect, useState } from "react";
 import Card from "./Card";
 
-const Container = ({ data, handleOnClick }) => {
+const Container = ({ data = [], handleOnClick }) => {
+  const [list, setList] = useState([]);
+
+  useEffect(() => {
+    if (data && data?.length) {
+      setList(data);
+    }
+  }, [data])
+
   return (
     <>
       <div className="container">
-        {data.map((val, index) => {
+        {list.map((val, index) => {
           return <Card key={index} data={val} handleOnClick={handleOnClick} />;
         })}
       </div>

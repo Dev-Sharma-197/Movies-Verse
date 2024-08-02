@@ -4,6 +4,7 @@ const Card = ({ data, handleOnClick }) => {
       <div
         className="card"
         onClick={() => {
+          console.log('fire')
           handleOnClick(data.imdbID);
         }}
       >
